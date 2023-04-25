@@ -25,8 +25,51 @@ export default class App extends React.Component {
   {
       src: 'entypo',
       name: 'feather',
-      color: '#7db
- 
+      color: '#7d4b12'
+     },
+     {
+     src: 'entypo',
+     name: 'flower',
+     color: '#37b24d'
+     },
+     {
+     src: 'entypo',
+     name: 'moon',
+     color: '#FF0000'
+     },
+     {
+     src: 'entypo',
+     name: 'youtube',
+     color: '#FF0000'
+     },
+     {
+     src: 'entypo',
+     nanme: 'shop',
+     color: '#5f5f5f'
+     },
+     {
+     src: 'fontawesome',
+     name: 'github',
+     color: '#24292e'
+     },
+     {
+     src: 'fontawesome',
+     name: 'skype',
+     color: '#1686D9'
+     },
+     {
+     src: 'fontawesome',
+     name: 'send',
+     color: '#1c7cd6'
+     },
+     {
+     src: 'ionicons',
+     name: 'logo-facebook',
+     color: '#3C5B9B'
+     }
+    ];
+   }
+  }
     
     
   return (
