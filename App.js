@@ -3,9 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Button } from 'react-native';
 import { Ionicons, FontAwesome, Entypo } from '@expo/vector-icons'; 
 //Kate
-import Header from './components/Header';
-import Score from './components/Score';
-import Card from './components/Card';
+import Header from './components/header';
+import Score from './components/score';
+import Card from './components/card';
 import helpers from './components/helpers';
 
 export default class App extends React.Component {
@@ -13,21 +13,25 @@ export default class App extends React.Component {
     super(props);
     this.renderCards = this.renderCards.bind(this);
     this.resetCards = this.resetCards.bind(this);
+
+    //icon sources
     let sources = {
       'fontawesome': fontAwesome,
       'entypo': Entypo,
       'ionicons': Ionicons
     };
+
     let cards = [
+    {
       src: 'fontawesome',
       name: 'heart',
       color: 'red',
-      },
-  {
+    },
+    {
       src: 'entypo',
       name: 'feather',
       color: '#7d4b12'
-     },
+    },
      {
      src: 'entypo',
      name: 'flower',
@@ -45,7 +49,7 @@ export default class App extends React.Component {
      },
      {
      src: 'entypo',
-     nanme: 'shop',
+     name: 'shop',
      color: '#5f5f5f'
      },
      {
@@ -69,26 +73,26 @@ export default class App extends React.Component {
      color: '#3C5B9B'
      }
     ];
-   }
-  }
+   
    let clone = JSON.parse(JSON.stringify(cards));
    this.cards = cards.concat(clone);
-   this.cards.map((obj) = > {
-   let id = Math.random().toString(36).substring(7);
-   obj.id = id;
-   obj.src = sources[obj.src];
-   obj.is_open = false;
- });
+   this.cards.map((obj) => {
+    let id = Math.random().toString(36).substring(7);
+    obj.id = id;
+    obj.src = sources[obj.src];
+    obj.is_open = false;
+    });
+
  this.cards= this.cards.shuffle();
  this.state = {
   current_selection: [],
-  selected_pairs: [].
+  selected_pairs: [],
   score: 0,
   cards: this.cards
 }
-render() {
+render(); {
   return (
-    <View style {styles.container}>
+    <View style = {styles.container}>
       <Header />
       <View style = {styles.body}>
         {
@@ -104,7 +108,7 @@ render() {
       </View>
      );
    }
-   renderRows() {
+   renderRows(); {
     let contents = this.getRowContents(this.state.cards);
     return contents.map((cards, index) => {
       return (
@@ -114,7 +118,7 @@ render() {
       );
      });
     }
-    getRowContents(cards) {
+    getRowContents(cards); {
       let contents_r = [];
       let contents = [];
       let count = 0;
@@ -129,7 +133,7 @@ render() {
      });
      return contents_r;
     }
-    renderCards(cards) {
+    renderCards(cards); {
       return cards.map((card, index) => {
         return (
           <Card
@@ -143,7 +147,7 @@ render() {
            );
           });
         }
-        clickCard(id) {
+        clickCard(id); {
           let selected_pairs = this.state.selected_pairs;
           let current_selection = this.state.current_selection;
           let score = this.state.score;
@@ -153,6 +157,7 @@ render() {
           let cards = this.state.cards;
           if(cards[index].is_open == false && selected_pairs.indexOf(cards[index].name === -1){
             cards[index].is_open = true;
+            current_selection.push({
               index: index,
               name: cards[index].name
             });
@@ -176,9 +181,9 @@ render() {
              this.setState({
               score: score,
               cards: cards,
-              current_selection: 
+              current_selection: current_selection,
             });
-            resetCards() {
+            resetCards(); {
               let cards = this.cards.map((obj) => {
                 obj.is_open = false;
                 return obj;

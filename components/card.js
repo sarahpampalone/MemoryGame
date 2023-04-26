@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
-import {FontAwesome} from @expo/vector-icons';
+import {FontAwesome} from '@expo/vector-icons';
 //kate do this
 
 export default function Card(props){

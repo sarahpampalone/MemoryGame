@@ -12,7 +12,7 @@ export default function Score () {
 const styles = StyleSheet.create({
   score_container: {
   flex: 1,
-  alignItems: 'center'
+  alignItems: 'center',
   padding: 10
 },
 score: {
