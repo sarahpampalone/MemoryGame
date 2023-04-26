@@ -1,10 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
-//import {FontAwesome} from @expo/vector-icons';
-//Kate do this!
+import {FontAwesome} from @expo/vector-icons';
+//kate do this
 
 export default function Card(props){
-    //let CardSource=FontAwesome; //Kate
+    let CardSource=FontAwesome; 
+    //kate again
     let icon_name = 'question-circle';
     let icon_color = '#393939';
 
