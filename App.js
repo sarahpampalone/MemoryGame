@@ -16,7 +16,7 @@ export default class App extends React.Component {
 
     //icon sources
     let sources = {
-      'fontawesome': fontAwesome,
+      'fontawesome': FontAwesome,
       'entypo': Entypo,
       'ionicons': Ionicons
     };
@@ -90,6 +90,12 @@ export default class App extends React.Component {
   score: 0,
   cards: this.cards
   }
+}
+resetCards() {
+  let cards = this.cards.map((obj) => {
+    obj.is_open = false;
+    return obj;
+  });
 }
 render() {
   return (
@@ -184,11 +190,6 @@ render() {
               cards: cards,
               current_selection: current_selection,
             });
-            resetCards(); {
-              let cards = this.cards.map((obj) => {
-                obj.is_open = false;
-                return obj;
-              });
               cards = cards.shuffle();
               this.setState({
                 current_selection: [],
@@ -196,7 +197,6 @@ render() {
                 cards: cards,
                 score: 0
               });
-             }
              const styles = StyleSheet.create({
               container: {
                 flex: 1,
