@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
+//import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Button } from 'react-native';
 import { Ionicons, FontAwesome, Entypo } from '@expo/vector-icons'; 
 //Kate
