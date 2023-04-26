@@ -133,7 +133,7 @@ render() {
       cards.forEach((item) => {
         count += 1;
         contents.push(item);
-        if(counts == 4){
+        if(count == 4){
           contents_r.push(contents)
           count = 0;
           contents = [];
