@@ -197,22 +197,22 @@ render() {
                 cards: cards,
                 score: 0
               });
-             const styles = StyleSheet.create({
-              container: {
-                flex: 1,
-                alignSelf: 'stretch',
-                backgroundColor: '#fff'
-              },
-              row: {
-                flex: 1,
-                flexDirection: 'row'
-              },
-              body: {
-                flex: 18,
-                justifyContent: 'space-between',
-                padding: 10,
-                marginTop: 20
-               }
-              });
             }
           }
+          const styles = StyleSheet.create({
+            container: {
+              flex: 1,
+              alignSelf: 'stretch',
+              backgroundColor: '#fff'
+            },
+            row: {
+              flex: 1,
+              flexDirection: 'row'
+            },
+            body: {
+              flex: 18,
+              justifyContent: 'space-between',
+              padding: 10,
+              marginTop: 20
+             }
+            });
