@@ -1,7 +1,8 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Button } from 'react-native';
-##import { Ionicons, FontAwesome, Entypo } from '@expo/vector-icons'; Kate
+import { Ionicons, FontAwesome, Entypo } from '@expo/vector-icons'; 
+//Kate
 import Header from './components/Header';
 import Score from './components/Score';
 import Card from './components/Card';
