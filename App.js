@@ -89,8 +89,9 @@ export default class App extends React.Component {
   selected_pairs: [],
   score: 0,
   cards: this.cards
+  }
 }
-render(); {
+render() {
   return (
     <View style = {styles.container}>
       <Header />
@@ -108,7 +109,8 @@ render(); {
       </View>
      );
    }
-   renderRows(); {
+  
+   renderRows(){
     let contents = this.getRowContents(this.state.cards);
     return contents.map((cards, index) => {
       return (
@@ -118,7 +120,7 @@ render(); {
       );
      });
     }
-    getRowContents(cards); {
+    getRowContents(cards) {
       let contents_r = [];
       let contents = [];
       let count = 0;
@@ -133,7 +135,7 @@ render(); {
      });
      return contents_r;
     }
-    renderCards(cards); {
+    renderCards(cards) {
       return cards.map((card, index) => {
         return (
           <Card
@@ -147,7 +149,7 @@ render(); {
            );
           });
         }
-        clickCard(id); {
+        clickCard(id) {
           let selected_pairs = this.state.selected_pairs;
           let current_selection = this.state.current_selection;
           let score = this.state.score;
@@ -161,8 +163,7 @@ render(); {
               index: index,
               name: cards[index].name
             });
-         }
-         }
+        }
          if(current_selection.length == 2){
           if(current_selection[0].name == current_selection[1].name){
             score += 1;

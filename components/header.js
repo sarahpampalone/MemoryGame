@@ -9,7 +9,7 @@ export default function Header() {
 );
 }
 
-const styles = Style.Sheet.create({
+const styles = StyleSheet.create({
   header: {
     flex: 1,
     flexDirection: 'column',
