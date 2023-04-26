@@ -155,7 +155,7 @@ render(); {
             return card.id == id;
           });
           let cards = this.state.cards;
-          if(cards[index].is_open == false && selected_pairs.indexOf(cards[index].name === -1){
+          if(cards[index].is_open == false && selected_pairs.indexOf(cards[index].name === -1)){
             cards[index].is_open = true;
             current_selection.push({
               index: index,
@@ -213,5 +213,5 @@ render(); {
                 marginTop: 20
                }
               });
-                
-                
+            }
+          }
